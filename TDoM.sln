@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDoM.UI", "TDoM\TDoM.UI.csproj", "{ED684BA8-24EA-4F2D-AEE5-71CFA32FF629}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDoM.Core", "TDoM.Core\TDoM.Core.csproj", "{D214DB6A-E511-4F81-8DA8-6FB51EB84A4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED684BA8-24EA-4F2D-AEE5-71CFA32FF629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED684BA8-24EA-4F2D-AEE5-71CFA32FF629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED684BA8-24EA-4F2D-AEE5-71CFA32FF629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED684BA8-24EA-4F2D-AEE5-71CFA32FF629}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D214DB6A-E511-4F81-8DA8-6FB51EB84A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D214DB6A-E511-4F81-8DA8-6FB51EB84A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D214DB6A-E511-4F81-8DA8-6FB51EB84A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D214DB6A-E511-4F81-8DA8-6FB51EB84A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81C7EA89-1506-4759-9294-C7E473026806}
+	EndGlobalSection
+EndGlobal
