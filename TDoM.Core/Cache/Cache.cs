@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TDoM.Core
+namespace TDoM.Core.Cache
 {
     /// <summary>
     /// Class for handling cache of metadata
