@@ -22,8 +22,6 @@ namespace TDoM.Core.Search
         {
             return Track.ID;
         }
-        public MediaType GetMediaType() => MediaType.Track;
-
 
         public string GetTitleText()
         {

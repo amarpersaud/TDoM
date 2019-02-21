@@ -8,8 +8,6 @@ namespace TDoM.Core.Search
 {
     public interface SearchResult
     {
-        MediaType GetMediaType();
-
         string GetTitleText();
 
         string GetDescriptionText();
