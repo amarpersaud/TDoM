@@ -8,13 +8,15 @@ namespace TDoM.Core.Search
 {
     public interface SearchResult
     {
-        SearchType GetType();
+        MediaType GetMediaType();
 
         string GetTitleText();
 
         string GetDescriptionText();
 
         string GetImageURI();
+
+        CID GetID();
 
     }
 }

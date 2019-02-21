@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace TDoM.Core
 {
-    public class Band : Artist
+    public enum MediaType
     {
-        /// <summary>
-        /// Artists in this band
-        /// </summary>
-        public Artist[] Artists;
-        
+        Artist = 1,
+        Track = 2,
+        Album = 4
     }
 }

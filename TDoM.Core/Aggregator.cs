@@ -19,26 +19,41 @@ namespace TDoM.Core
             YTClient = new YoutubeClient();
         }
 
-        public async void SearchFor(SearchType type, string query)
+        public async void SearchFor(MediaType type, string query)
         {
-            if (type.HasFlag(SearchType.Track))
+            //Hit cache first, then search in appropriate places.
+
+            if (type.HasFlag(MediaType.Track))
             {
 
             }
-            if (type.HasFlag(SearchType.Album))
+            if (type.HasFlag(MediaType.Album))
             {
 
             }
-            if (type.HasFlag(SearchType.Track))
+            if (type.HasFlag(MediaType.Track))
             {
 
             }
 
             var youtubeResults = await YTClient.SearchVideosAsync(query);
-
-
         }
 
 
+        public static Track GetTrack(CID id)
+        {
+            //TODO: implement
+            throw new NotImplementedException();
+        }
+        public static Artist GetArtist(CID id)
+        {
+            //TODO: implement
+            throw new NotImplementedException();
+        }
+        public static Album GetAlbum(CID id)
+        {
+            //TODO: implement
+            throw new NotImplementedException();
+        }
     }
 }

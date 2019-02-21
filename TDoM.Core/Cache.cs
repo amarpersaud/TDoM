@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace TDoM.Core
 {
-    public class Label
+    /// <summary>
+    /// Class for handling cache of metadata
+    /// </summary>
+    public class Cache
     {
-        public Artist[] Artists;
-        public Band[] Bands;
-        public string Name;
+
     }
 }

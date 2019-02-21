@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TDoM.Core.Search
+namespace TDoM.Core
 {
-    public enum SearchType
+    public enum TrackType
     {
-        Artist = 1,
-        Track = 2,
-        Album = 4
+        Song,
+        Podcast,
+
     }
 }

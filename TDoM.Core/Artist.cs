@@ -27,6 +27,11 @@ namespace TDoM.Core
         public Role[] Roles;
 
         /// <summary>
+        /// Identifier for artist.
+        /// </summary>
+        CID id;
+
+        /// <summary>
         /// When the artist died. Should be DateTime.MinValue if artist is still alive 
         /// </summary>
         public DateTime Deceased;
@@ -40,26 +45,6 @@ namespace TDoM.Core
             {
                 return Deceased == DateTime.MinValue;
             }
-        }
-
-        /// <summary>
-        /// ITunes ID. For use in searching for artists or for checking identity
-        /// </summary>
-        public string ITunesID;
-
-        /// <summary>
-        /// All Media Guide (AMG) ID. For use in searching for artists or for checking identity
-        /// </summary>
-        public string AMGID;
-
-        /// <summary>
-        /// Compares this Artist's id with another to check if they are the same artist
-        /// </summary>
-        /// <param name="a">Other artists</param>
-        /// <returns>False if artist ids are not the same</returns>
-        public bool IsSameArtist(Artist a)
-        {
-            return this.ITunesID == a.ITunesID || this.AMGID == a.AMGID;
         }
     }
 }

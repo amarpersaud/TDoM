@@ -22,5 +22,32 @@ namespace TDoM.Core
         /// Length of the track
         /// </summary>
         public TimeSpan Length;
+
+        /// <summary>
+        /// Genre of the song
+        /// </summary>
+        public string Genre;
+
+        /// <summary>
+        /// ID of the track.
+        /// </summary>
+        public CID ID;
+
+        /// <summary>
+        /// ID of the album that the track is in.
+        /// </summary>
+        public CID AlbumID;
+
+        /// <summary>
+        /// ID of the artist.
+        /// </summary>
+        public CID ArtistID;
+
+
+        public string GetArtistName()
+        {
+            return Aggregator.GetArtist(ArtistID).Name;
+        }
+
     }
 }
