@@ -40,16 +40,31 @@ namespace TDoM.Core
         }
 
 
+        /// <summary>
+        /// Get track based on the ID.
+        /// </summary>
+        /// <param name="id">ID of the track (Itunes, AMG, TDoM, etc)</param>
+        /// <returns>Track with appropriate metadata</returns>
         public static Track GetTrack(CID id)
         {
             //TODO: implement
             throw new NotImplementedException();
         }
+        /// <summary>
+        /// Get an artist based on the ID.
+        /// </summary>
+        /// <param name="id">ID of the artist (Itunes, AMG, TDoM, etc)</param>
+        /// <returns>Artist with appropriate metadata</returns>
         public static Artist GetArtist(CID id)
         {
             //TODO: implement
             throw new NotImplementedException();
         }
+        /// <summary>
+        /// Get an album or collection based on the ID.
+        /// </summary>
+        /// <param name="id">ID of the album or collection (Itunes, AMG, TDoM, etc)</param>
+        /// <returns>Album with appropriate metadata</returns>
         public static Album GetAlbum(CID id)
         {
             //TODO: implement
