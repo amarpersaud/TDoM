@@ -39,6 +39,12 @@ namespace TDoM.Core
         public string CoverArtURI;
 
         /// <summary>
+        /// URI for sources that have the audio or tracks for this album.
+        /// May be Youtube videos or soundcloud links
+        /// </summary>
+        public string[] EquivalentSourceURI;
+
+        /// <summary>
         /// Total runtime of all tracks on the album
         /// </summary>
         /// <returns></returns>

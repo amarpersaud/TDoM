@@ -43,7 +43,16 @@ namespace TDoM.Core
         /// </summary>
         public CID ArtistID;
 
+        /// <summary>
+        /// URI for sources that have the audio for this track.
+        /// May be Youtube videos or soundcloud links
+        /// </summary>
+        public string[] EquivalentSourceURI;
 
+        /// <summary>
+        /// Gets the name of the artist who made the track.
+        /// </summary>
+        /// <returns></returns>
         public string GetArtistName()
         {
             return Aggregator.GetArtist(ArtistID).Name;
