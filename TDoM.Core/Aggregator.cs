@@ -13,6 +13,7 @@ namespace TDoM.Core
     public class Aggregator
     {
         public YoutubeClient YTClient;
+        List<SearchResult> SearchResults = new List<SearchResult>();
 
         public Aggregator()
         {
@@ -21,7 +22,10 @@ namespace TDoM.Core
 
         public async void SearchFor(MediaType type, string query)
         {
-            //Hit cache first, then search in appropriate places.
+            List<SearchResult> results = new List<SearchResult>();
+
+
+            //Search in appropriate places.
 
             if (type.HasFlag(MediaType.Track))
             {
@@ -31,12 +35,24 @@ namespace TDoM.Core
             {
 
             }
+            if (type.HasFlag(MediaType.Playlist))
+            {
+
+            }
             if (type.HasFlag(MediaType.Track))
             {
 
             }
 
             var youtubeResults = await YTClient.SearchVideosAsync(query);
+
+            foreach(Video vid in youtubeResults)
+            {
+                results.Add(new TrackSearchResult());
+
+            }
+
+            SearchResults = results;
         }
 
 
@@ -48,8 +64,10 @@ namespace TDoM.Core
         public static Track GetTrack(CID id)
         {
             //TODO: implement
+            // Hit cache, then lookup if cache doesn't have it
             throw new NotImplementedException();
         }
+
         /// <summary>
         /// Get an artist based on the ID.
         /// </summary>
@@ -58,8 +76,10 @@ namespace TDoM.Core
         public static Artist GetArtist(CID id)
         {
             //TODO: implement
+            // Hit cache, then lookup if cache doesn't have it
             throw new NotImplementedException();
         }
+
         /// <summary>
         /// Get an album or collection based on the ID.
         /// </summary>
@@ -68,6 +88,19 @@ namespace TDoM.Core
         public static Album GetAlbum(CID id)
         {
             //TODO: implement
+            // Hit cache, then lookup if cache doesn't have it
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Get a playlist based on the ID. Will only hit TDoM ID because playlists are TDoM only.
+        /// </summary>
+        /// <param name="id">ID of the album or collection (TDoM)</param>
+        /// <returns>Album with appropriate metadata</returns>
+        public static Playlist GetPlaylist(CID id)
+        {
+            //TODO: implement
+            // Hit cache, then lookup if cache doesn't have it
             throw new NotImplementedException();
         }
     }
