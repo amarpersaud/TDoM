@@ -16,7 +16,24 @@ namespace TDoM.Core.Search
         /// <summary>
         /// The underlying track
         /// </summary>
-        public Track Track;
+        public CID TrackID;
+
+        public TrackSearchResult()
+        {
+
+        }
+
+        public TrackSearchResult(CID t)
+        {
+            this.TrackID = t;
+            TrackType = TrackType.Song;
+        }
+
+        public TrackSearchResult(CID t, TrackType tt)
+        {
+            this.TrackID = t;
+            TrackType = tt;
+        }
 
         /// <summary>
         /// Get the track's ID
@@ -24,7 +41,7 @@ namespace TDoM.Core.Search
         /// <returns>CID with the track's ID</returns>
         public CID GetID()
         {
-            return Track.ID;
+            return TrackID;
         }
 
         /// <summary>
@@ -34,7 +51,7 @@ namespace TDoM.Core.Search
         public string GetTitleText()
         {
             //TODO: Implement properly
-            return Track.Name;
+            return Aggregator.GetTrack(TrackID).Name;
         }
 
         /// <summary>
@@ -43,8 +60,9 @@ namespace TDoM.Core.Search
         /// <returns>Description of the track, with the artist, genere, and length</returns>
         public string GetDescriptionText()
         {
+            Track t = Aggregator.GetTrack(TrackID);
             //TODO: Implement properly
-            return Track.GetArtistName() + " - " + Track.Genre + " - " + Track.Length.ToString("h'h 'm'm 's's'");
+            return t.GetArtistName() + " - " + t.Genre + " - " + t.Length.ToString("h'h 'm'm 's's'");
         }
 
         /// <summary>
@@ -53,7 +71,9 @@ namespace TDoM.Core.Search
         /// <returns>String with the URI</returns>
         public string GetImageURI()
         {
-            return Aggregator.GetAlbum(Track.AlbumID).CoverArtURI;
+            return Aggregator.GetAlbum(
+                    Aggregator.GetTrack(TrackID).AlbumID
+                ).CoverArtURI;
         }
     }
 }
