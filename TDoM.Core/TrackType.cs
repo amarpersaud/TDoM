@@ -9,7 +9,6 @@ namespace TDoM.Core
     public enum TrackType
     {
         Song,
-        Podcast,
-
+        Podcast
     }
 }
