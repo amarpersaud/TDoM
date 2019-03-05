@@ -10,6 +10,7 @@ namespace TDoM.Core
     {
         Artist = 1,
         Track = 2,
-        Album = 4
+        Album = 4,
+        Playlist = 8,
     }
 }
