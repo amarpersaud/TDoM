@@ -30,21 +30,5 @@ namespace TDoM.Core
         /// Identifier for artist.
         /// </summary>
         CID id;
-
-        /// <summary>
-        /// When the artist died. Should be DateTime.MinValue if artist is still alive 
-        /// </summary>
-        public DateTime Deceased;
-
-        /// <summary>
-        /// Returns if the artist is deceased.
-        /// </summary>
-        public bool IsDeceased
-        {
-            get
-            {
-                return Deceased == DateTime.MinValue;
-            }
-        }
     }
 }
