@@ -49,10 +49,20 @@ namespace TDoM.Core
         /// </summary>
         public string[] EquivalentSourceURI;
 
+        public Track()
+        {
+
+        }
+        public Track(int Number, string Name, TimeSpan length, string Genre, CID id, CID AlbumID, CID ArtistID)
+        {
+
+        }
+
+
         /// <summary>
         /// Gets the name of the artist who made the track.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String with the artist's name. "Unknown Artist" if not found.</returns>
         public string GetArtistName()
         {
             return Aggregator.GetArtist(ArtistID).Name;
