@@ -22,9 +22,9 @@ namespace TDoM.Core
         public string OriginPlace;
 
         /// <summary>
-        /// General Roles of the artist/band
+        /// General Roles of the artist
         /// </summary>
-        public Role[] Roles;
+        public string Roles;
 
         /// <summary>
         /// Identifier for artist.

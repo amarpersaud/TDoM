@@ -39,10 +39,6 @@ namespace TDoM.Core
             {
 
             }
-            if (type.HasFlag(MediaType.Track))
-            {
-
-            }
 
             var youtubeResults = await YTClient.SearchVideosAsync(query);
 

@@ -11,7 +11,7 @@ namespace TDoM.Core
         /// <summary>
         /// Artists that worked on the album. May have differing roles from
         /// </summary>
-        public Dictionary<CID, Role[]> AlbumArtists;
+        public List<CID> AlbumArtists;
 
         /// <summary>
         /// ID of the album
@@ -64,7 +64,7 @@ namespace TDoM.Core
         /// <returns>false if the artists did not form a band, or there is a single artist</returns>
         public bool HasBand()
         {
-            foreach(CID b in AlbumArtists.Keys)
+            foreach(CID b in AlbumArtists)
             {
                 if(Aggregator.GetArtist(b) is Band)
                 {
@@ -79,7 +79,7 @@ namespace TDoM.Core
         /// <returns>Band if there is a single band. Null if there is no band or made by a single artist.</returns>
         public Band GetBand()
         {
-            foreach (CID a in AlbumArtists.Keys)
+            foreach (CID a in AlbumArtists)
             {
                 if (Aggregator.GetArtist(a) is Band)
                 {

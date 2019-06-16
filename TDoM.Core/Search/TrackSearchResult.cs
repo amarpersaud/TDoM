@@ -8,10 +8,6 @@ namespace TDoM.Core.Search
 {
     public class TrackSearchResult: SearchResult
     {
-        /// <summary>
-        /// Type of track
-        /// </summary>
-        public TrackType TrackType;
 
         /// <summary>
         /// The underlying track
@@ -26,13 +22,6 @@ namespace TDoM.Core.Search
         public TrackSearchResult(CID t)
         {
             this.TrackID = t;
-            TrackType = TrackType.Song;
-        }
-
-        public TrackSearchResult(CID t, TrackType tt)
-        {
-            this.TrackID = t;
-            TrackType = tt;
         }
 
         /// <summary>
